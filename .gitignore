@@ -1,0 +1,71 @@
+# 数据集与特征缓存
+/dataset/
+/data/raw/
+/cache/
+
+# 第三方仓库与官方大权重
+/external/*
+!/external/README.md
+/checkpoints/
+
+# 训练日志与大批量结果；主页展示素材已复制到 assets/
+/logs/
+/results/*
+!/results/README.md
+!/results/main_table.csv
+!/results/main_table.md
+
+# 仅提交 weights/ 中明确选定的本项目权重
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+!/weights/autobox_segaware_best.pt
+
+# Python 缓存、测试缓存与环境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.conda/
+
+# 编辑器与操作系统文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 报告草稿、旧方案和临时目录保留在本地，不进入代码仓库
+/archive/
+/output/
+/reports/
+/tmp/
+/.edge-headless-*/
+
+# 根目录中的制图源文件与临时锁文件
+/*.tif
+/*.tiff
+/*.ppt
+/*.pptx
+/~$*
+
+# LaTeX 中间文件
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+
+# TensorBoard 与通用临时文件
+events.out.tfevents.*
+*.tmp
+*.temp
+*.bak

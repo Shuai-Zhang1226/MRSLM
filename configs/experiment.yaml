@@ -1,0 +1,33 @@
+seed: 2026
+device: cuda
+data:
+  root: dataset/CAMUS_public
+  lv_label: 1
+  views: [2CH, 4CH]
+  phases: [ED, ES]
+model:
+  type: vit_b
+  checkpoint: checkpoints/sam_echo_official/sam_model_best.pth
+  input_size: 1024
+  amp: true
+  gt_box_padding: 0.0
+  autobox_padding: 0.05
+cache:
+  root: cache/embeddings
+autobox:
+  hidden_channels: 128
+  num_blocks: 2
+  epochs: 100
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  num_workers: 0
+  center_loss_weight: 1.0
+  ltrb_loss_weight: 2.0
+  giou_loss_weight: 1.0
+  box_aux_weight: 0.2
+  softargmax_temperature: 1.0
+  checkpoint: checkpoints/autobox_segaware_best.pt
+output:
+  gt_box: results/gt_box
+  autobox: results/autobox_segaware
