@@ -1,4 +1,4 @@
-name: echo-autobox
+name: autobox
 
 channels:
   - conda-forge
