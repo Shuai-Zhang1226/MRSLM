@@ -59,7 +59,7 @@ checkpoints/sam_echo_official/sam_model_best.pth
 
 本项目训练得到的 AutoBox 权重已经放在 [`weights/autobox_segaware_best.pt`](weights/autobox_segaware_best.pt)。
 
-## 简化运行流程
+## 运行流程
 
 以下命令均在仓库根目录执行：
 
