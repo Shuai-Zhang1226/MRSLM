@@ -18,7 +18,7 @@ SAM-Echo 在心脏超声图像上具有较好的左心室分割能力，但它�
 训练时使用可微的 soft-argmax 生成软包围框，使掩码分割误差能够反向传播至 AutoBox；推理时使用 argmax 生成确定包围框。SAM-Echo 全程冻结，只训练 AutoBox，因此可在 6 GB 显存的 RTX 3060 上完成实验。
 
 <p align="center">
-  <img src="assets/2.tif" width="900" alt="方法结构图">
+  <img src="assets/2.png" width="900" alt="方法结构图">
 </p>
 
 ## 主要特点
